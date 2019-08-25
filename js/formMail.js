@@ -30,11 +30,11 @@ $('#sendMail').on('click', function () {
        $('#sendMail').prop('disabled', true);
      },
      success: function (data) {
-       if(!data) {
+       if(!data)
          alert("Сообщения не отправлено");
-       } else {
+       else 
          $('#mailForm').trigger('reset');
-       }
+
        $('#sendMail').prop('disabled', false);
      }
    });
