@@ -4,10 +4,10 @@
   $phone = $_POST['phone'];
   $message = $_POST['message'];
 
-  $to = 'ivanigorolenyk@gmail.com';
-  $subject = 'Сообщения с сайта';
 
+  $subject = 'Сообщения с сайта';
   $headers = "From: $email\r\nReply-to: $email\n\rContent: text/html; charset=utf-8\r\n";
-  $success  = mail ($to, $subject, $message, $headers);
+
+  $success  = mail ('ivanigorolenyk@gmail.com', $subject, $message, $headers);
   echo $success;
 ?>

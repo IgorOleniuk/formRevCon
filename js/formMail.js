@@ -24,7 +24,7 @@ $('#sendMail').on('click', function () {
      url: 'ajax/mail.php',
      type: 'POST',
      cache: false,
-     data: {'name': name, 'email': email, 'phone': phone, 'message': message },
+     data: {'email': email, 'name': name, 'phone': phone, 'message': message },
      dataType: 'html',
      beforeSend: function () {
        $('#sendMail').prop('disabled', true);
@@ -32,7 +32,7 @@ $('#sendMail').on('click', function () {
      success: function (data) {
        if(!data)
          alert("Сообщения не отправлено");
-       else 
+       else
          $('#mailForm').trigger('reset');
 
        $('#sendMail').prop('disabled', false);
